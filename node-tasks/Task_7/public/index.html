@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #chat { width: 600px; margin: 0 auto; }
+    #messages { height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; }
+    #input { width: 100%; padding: 10px; box-sizing: border-box; }
+    .message { margin-bottom: 10px; }
+    .message .username { font-weight: bold; }
+    .message .text { margin-left: 5px; }
+  </style>
+</head>
+<body>
+  <div id="chat">
+    <div id="messages"></div>
+    <input type="text" id="input" placeholder="Type a message..." />
+  </div>
+  <script>
+    const ws = new WebSocket('ws://localhost:3000');
+    const messages = document.getElementById('messages');
+    const input = document.getElementById('input');
+
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      const div = document.createElement('div');
+      div.className = 'message';
+      if (data.type === 'message') {
+        div.innerHTML = `<span class="username">${data.username}:</span> <span class="text">${data.text}</span>`;
+      } else if (data.type === 'user-joined') {
+        div.innerHTML = `<span class="username">${data.username} joined the room.</span>`;
+      } else if (data.type === 'user-left') {
+        div.innerHTML = `<span class="username">${data.username} left the room.</span>`;
+      }
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    };
+
+    input.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        const message = input.value;
+        ws.send(JSON.stringify({ type: 'message', text: message }));
+        input.value = '';
+      }
+    });
+
+    // Example of joining a room and setting username
+    ws.onopen = () => {
+      ws.send(JSON.stringify({ type: 'join', room: 'general', username: 'User1' }));
+    };
+  </script>
+</body>
+</html>

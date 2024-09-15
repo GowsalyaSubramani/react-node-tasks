@@ -1,0 +1,22 @@
+[
+  {
+    "path": "test-files\\class2.txt",
+    "size": 50
+  },
+  {
+    "path": "test-files\\class3.txt",
+    "size": 58
+  },
+  {
+    "path": "test-files\\basic1.html",
+    "size": 110
+  },
+  {
+    "path": "test-files\\class1.txt",
+    "size": 146
+  },
+  {
+    "path": "test-files\\basic2.html",
+    "size": 230
+  }
+]

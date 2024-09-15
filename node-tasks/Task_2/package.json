@@ -1,0 +1,15 @@
+{
+  "name": "my-cli-tool",
+  "version": "1.0.0",
+  "description": "A CLI tool to list files and perform actions",
+  "main": "index.js",
+  "bin": {
+    "my-cli-tool": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "commander": "^9.4.1"
+  }
+}

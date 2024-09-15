@@ -1,0 +1,12 @@
+.App {
+    text-align: center; /* Center all text inside .App */
+    padding: 20px; /* Add padding around the entire App component */
+    background-color: #f0f0f0; /* Optional: Light background color */
+  }
+  
+  .App h1 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #007BFF; /* Matching color for a consistent theme */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  

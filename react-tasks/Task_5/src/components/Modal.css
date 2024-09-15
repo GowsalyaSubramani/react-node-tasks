@@ -1,0 +1,148 @@
+/* Backdrop styling */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker, semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out; /* Smooth fade-in animation */
+}
+
+/* Fade-in animation for backdrop */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal styles */
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease-out; /* Slide-in animation */
+  transition: transform 0.3s ease-out;
+  transform: scale(1); /* Start small, grow into place */
+}
+
+/* Slide-in animation for modal */
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Custom sizes */
+.modal-small {
+  width: 300px;
+}
+
+.modal-medium {
+  width: 500px;
+}
+
+.modal-large {
+  width: 800px;
+}
+
+/* Custom positions */
+.modal-center {
+  align-self: center;
+}
+
+.modal-top {
+  align-self: flex-start;
+}
+
+.modal-bottom {
+  align-self: flex-end;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal-close:hover {
+  color: #ff4d4d; /* Color change on hover */
+}
+
+/* Enhancing buttons inside modal */
+.modal button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.modal button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+}
+
+.modal form div {
+  margin-bottom: 15px;
+}
+
+.modal form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.modal form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.modal form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
