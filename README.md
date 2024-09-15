@@ -2,11 +2,6 @@
 
 This project contains a series of React components and Node.js/Express-based tasks.
 
-Tasks/
-├── node-tasks/                # Node.js Express server
-├── react-tasks/               # React project with various components
-├── README.md                  # Project documentation
-
 Installation
 1.Clone the repository:
 
