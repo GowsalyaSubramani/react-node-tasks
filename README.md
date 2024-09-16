@@ -69,10 +69,14 @@ npm install express
 4.Run the application:
 Depending on the filename in each task, run the appropriate command (for example app.js, index.js, or server.js):
 
+```
 node app.js
+```
 Or, if you're using nodemon for automatic restarting:
 
+```
 nodemon app.js
+```
 
 5.View the output:
 The server will be running on the port number specified in the code (typically 3000 or 5000).
