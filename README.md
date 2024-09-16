@@ -16,24 +16,26 @@ This project contains a series of React components and Node.js/Express-based tas
 
 To get started, clone the repository to your local machine using the following command:
 
-```bash
+```
 git clone https://github.com/GowsalyaSubramani/react-node-tasks.git
-
+```
 Once cloned, you will have two main folders: one for React tasks and one for Node.js tasks.
 
 Running React Tasks
 1.Navigate into the React tasks folder:
+```
 cd react-tasks
+```
 
 2.Create a new React task project using Vite (for each task):
-npm create vite@latest Task_number
-cd Task_number
+```npm create vite@latest Task_number```
+```cd Task_number```
 
 3.Install necessary dependencies:
-npm install
+```npm install```
 
 4.Run the project:
-npm run dev
+```npm run dev```
 
 View the output:
 The app will be available at http://localhost:5173 (or the port number mentioned in your terminal).
@@ -42,13 +44,13 @@ Note: Repeat the steps above for each React task, ensuring all dependencies show
 
 Running Node.js Tasks
 1.Navigate into the Node tasks folder:
-cd node-tasks
+```cd node-tasks```
 
 2.Initialize a Node.js project (if not already done):
-npm init -y
+```npm init -y```
 
 3.Install Express (if required for the task):
-npm install express
+```npm install express```
 
 4.Run the application:
 Depending on the filename in each task, run the appropriate command (for example app.js, index.js, or server.js):
